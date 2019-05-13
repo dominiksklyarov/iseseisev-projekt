@@ -1,0 +1,174 @@
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+$montserrat: "Montserrat", sans-serif;
+
+$background-black: rgba(0, 0, 0, 0.4);
+$background-hover: rgba(0, 0, 0, 0.6);
+
+@mixin transition {
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+}
+
+%transition {
+  @include transition;
+}
+
+@mixin button {
+  width: 100px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  background-color: $background-black;
+  border: 1px solid $background-black;
+  color: white;
+  font-size: 13px;
+  @include transition;
+  outline: none;
+  font-weight: 700;
+  &:hover {
+    background-color: $background-hover;
+    border: 1px solid $background-hover;
+    color: white;
+    @include transition;
+    cursor: pointer;
+  }
+}
+
+%button {
+  @include button;
+}
+
+body {
+  background-image: url("../backgrounds/clear-day.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: $montserrat;
+  color: white;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.4);
+  width: 60%;
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  .today,
+  .tomorrow {
+    padding: 10px;
+  }
+  .tomorrow {
+    display: none;
+  }
+  .time-zone {
+    text-align: center;
+    font-size: 15px;
+  }
+  .title,
+  .title-tomorrow {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .temperature,
+  .temperature-tomorrow {
+    font-size: 80px;
+    margin: 0;
+  }
+  .summary,
+  .summary-tomorrow {
+    font-size: 25px;
+    margin: 10px 0 0 0;
+  }
+  .today-summary,
+  .tomorrow-summary {
+    margin: 40px 0 0 0;
+  }
+  .sunrise-sunset,
+  .sunrise-sunset-tomorrow {
+    font-size: 12px;
+    margin: 40px 0 15px 0;
+  }
+}
+.button {
+  @include button;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  //CSS
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    background: $background-black;
+    width: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    .today,
+    .tomorrow {
+      padding: 10px;
+    }
+    .tomorrow {
+      display: none;
+    }
+    .time-zone {
+      text-align: center;
+      font-size: 15px;
+    }
+    .title,
+    .title-tomorrow {
+      text-transform: uppercase;
+      font-size: 20px;
+    }
+    .temperature,
+    .temperature-tomorrow {
+      font-size: 80px;
+      margin: 0;
+    }
+    .summary,
+    .summary-tomorrow {
+      font-size: 25px;
+      margin: 10px 0 0 0;
+    }
+    .today-summary,
+    .tomorrow-summary {
+      margin: 40px 0 0 0;
+    }
+    .sunrise-sunset,
+    .sunrise-sunset-tomorrow {
+      font-size: 12px;
+      margin: 40px 0 15px 0;
+    }
+  }
+  .button {
+    @include button;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+  }
+}

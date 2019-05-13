@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+body {
+  background-image: url("../backgrounds/clear-day.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.4);
+  width: 60%;
+  max-width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container .today,
+.container .tomorrow {
+  padding: 10px;
+}
+
+.container .tomorrow {
+  display: none;
+}
+
+.container .time-zone {
+  text-align: center;
+  font-size: 15px;
+}
+
+.container .title,
+.container .title-tomorrow {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.container .temperature,
+.container .temperature-tomorrow {
+  font-size: 80px;
+  margin: 0;
+}
+
+.container .summary,
+.container .summary-tomorrow {
+  font-size: 25px;
+  margin: 10px 0 0 0;
+}
+
+.container .today-summary,
+.container .tomorrow-summary {
+  margin: 40px 0 0 0;
+}
+
+.container .sunrise-sunset,
+.container .sunrise-sunset-tomorrow {
+  font-size: 12px;
+  margin: 40px 0 15px 0;
+}
+
+.button {
+  width: 100px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 13px;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  outline: none;
+  font-weight: 700;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -80%);
+          transform: translate(-50%, -80%);
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  color: white;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+/* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+@media (min-width: 320px) and (max-width: 480px) {
+  .container {
+    background: rgba(0, 0, 0, 0.4);
+    width: 95%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .container .today,
+  .container .tomorrow {
+    padding: 10px;
+  }
+  .container .tomorrow {
+    display: none;
+  }
+  .container .time-zone {
+    text-align: center;
+    font-size: 15px;
+  }
+  .container .title,
+  .container .title-tomorrow {
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .container .temperature,
+  .container .temperature-tomorrow {
+    font-size: 80px;
+    margin: 0;
+  }
+  .container .summary,
+  .container .summary-tomorrow {
+    font-size: 25px;
+    margin: 10px 0 0 0;
+  }
+  .container .today-summary,
+  .container .tomorrow-summary {
+    margin: 40px 0 0 0;
+  }
+  .container .sunrise-sunset,
+  .container .sunrise-sunset-tomorrow {
+    font-size: 12px;
+    margin: 40px 0 15px 0;
+  }
+  .button {
+    width: 100px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 13px;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    outline: none;
+    font-weight: 700;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -80%);
+            transform: translate(-50%, -80%);
+  }
+  .button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    color: white;
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    cursor: pointer;
+  }
+}
+/*# sourceMappingURL=style.css.map */

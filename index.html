@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      property="og:url"
+      content="https://dev.dominiksklyarov.com/weather-app/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Weather Application" />
+    <meta property="og:description" content="Know your weather" />
+    <meta
+      property="og:image"
+      content="https://dev.dominiksklyarov.com/weather-app/backgrounds/clear-day.jpg"
+    />
+    <title>Weather application</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="today">
+        <p class="time-zone"></p>
+        <p class="title">Today</p>
+        <h1 class="temperature">Loading</h1>
+        <p class="summary"></p>
+        <p class="today-summary"></p>
+        <p class="sunrise-sunset"></p>
+      </div>
+      <div class="tomorrow">
+        <p class="time-zone"></p>
+        <p class="title-tomorrow">Tomorrow</p>
+        <h1 class="temperature-tomorrow">Loading</h1>
+        <p class="summary-tomorrow"></p>
+        <p class="tomorrow-summary"></p>
+        <p class="sunrise-sunset-tomorrow"></p>
+      </div>
+    </div>
+    <button class="button">Tomorrow</button>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
